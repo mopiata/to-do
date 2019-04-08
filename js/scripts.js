@@ -14,7 +14,22 @@ $(document).ready(function(){
     var newItem=new ListItem(inputtedItem);
 
     $("ul#to-do-list").append("<li><span class='item'>" + newItem.listedItem+"</span></li>");
-
+    $("#to-do-list").show();
     $("input#list-item").val("");
+
+    
+   
+
+   
+
   });
+  $('ul#to-do-list').on('click', 'li', function () {
+    $("ul#done").append($(this));
+  });
+  $('ul#done').on('click', 'li', function () {
+    $(this).remove();
+  });
+ 
+
+  
 });
